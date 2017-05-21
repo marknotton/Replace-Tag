@@ -1,7 +1,7 @@
 (function($, window, undefined){
 
   $.extend({
-    replaceTag: function (currentElem, newTagObj, removeProps) {
+    replaceTags: function (currentElem, newTagObj, removeProps) {
       var $currentElem = $(currentElem);
       var i, $newTag = $(newTagObj).clone();
       if (!removeProps) {
@@ -18,17 +18,17 @@
   });
 
   $.fn.extend({
-    replaceTag: function (newTagObj, removeProps) {
+    replaceTags: function (newTagObj, removeProps) {
       // "return" suggested by ColeLawrence
       return this.each(function() {
-          jQuery.replaceTag(this, newTagObj, removeProps);
+          jQuery.replaceTags(this, newTagObj, removeProps);
       });
     }
   });
 
 
   // // Add the selector, function, and breakpoint rules into an array, to be called when the screen resizes
-  // $.fn.replaceTag = function() {
+  // $.fn.replaceTags = function() {
   //   var args = Array.prototype.slice.call(arguments);
 
   //   if(typeof args[0] == 'number') {

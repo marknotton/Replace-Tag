@@ -24,16 +24,16 @@ bower install replace-tags
 Replace all instances of 'div' tags with 'custom-div'
 
 ```
-replaceTag('div', 'custom-div');
+replaceTags('div', 'custom-div');
 ```
 
 This will do the same thing:
 ```
-$('div').replaceTag('custom-div');
+$('div').replaceTags('custom-div');
 ```
 
 You can pass in 'true' if you want to remove all other attributes that were part of the element
 
 ```
-replaceTag('div', 'custom-div', true);
+replaceTags('div', 'custom-div', true);
 ```
