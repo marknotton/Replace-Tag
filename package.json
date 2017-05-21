@@ -1,0 +1,9 @@
+{
+  "name": "replace-tags",
+  "version": "1.0.0",
+  "description": "Replace HTML tags with another",
+  "main": "replace-tags.js",
+  "repository": "https://github.com/marknotton/replace-tags",
+  "author": "Mark Notton <mark@marknotton.uk>",
+  "license": "MIT"
+}

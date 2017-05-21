@@ -1,15 +1,15 @@
 (function($, window, undefined){
 
   $.extend({
-    replaceTag: function (currentElem, newTagObj, keepProps) {
+    replaceTag: function (currentElem, newTagObj, removeProps) {
       var $currentElem = $(currentElem);
       var i, $newTag = $(newTagObj).clone();
-      if (keepProps) {//{{{
+      if (!removeProps) {
           newTag = $newTag[0];
           newTag.className = currentElem.className;
           $.extend(newTag.classList, currentElem.classList);
           $.extend(newTag.attributes, currentElem.attributes);
-      }//}}}
+      }
       $currentElem.wrapAll($newTag);
       $currentElem.contents().unwrap();
       // return node; (Error spotted by Frank van Luijn)
@@ -18,10 +18,10 @@
   });
 
   $.fn.extend({
-    replaceTag: function (newTagObj, keepProps) {
+    replaceTag: function (newTagObj, removeProps) {
       // "return" suggested by ColeLawrence
       return this.each(function() {
-          jQuery.replaceTag(this, newTagObj, keepProps);
+          jQuery.replaceTag(this, newTagObj, removeProps);
       });
     }
   });
