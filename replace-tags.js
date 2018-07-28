@@ -27,30 +27,4 @@
   });
 
 
-  // // Add the selector, function, and breakpoint rules into an array, to be called when the screen resizes
-  // $.fn.replaceTags = function() {
-  //   var args = Array.prototype.slice.call(arguments);
-
-  //   if(typeof args[0] == 'number') {
-  //     var delay = args.shift(), callback = args.shift();
-  //   }
-  //   else {
-  //     var callback = args.shift();
-  //   }
-  //   if (typeof callback == 'function') {
-  //     // Perform a few checks to make sure the selector that is being checked is valid
-  //     var selector = this.selector !== undefined && this.selector !== null && $(this.selector).length ? this.selector : null;
-
-  //     if (selector) {
-  //       if ( delay && delay != 0) {
-  //         setTimeout(function() {
-  //           callback.apply($(selector), args);
-  //         }, delay);
-  //       } else {
-  //         callback.apply($(selector), args);
-  //       }
-  //     }
-  //   }
-  // };
-
 })( jQuery );
