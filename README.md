@@ -8,17 +8,6 @@ Replace HTML tags with another
 ```
 npm i replace-tags
 ```
-
-### [Yarn](https://yarnpkg.com/en/package/replace-tags)
-```
-yarn add replace-tags
-```
-
-### Bower
-```
-bower install replace-tags
-```
-
 ## Usage
 
 Replace all instances of 'div' tags with 'custom-div'
